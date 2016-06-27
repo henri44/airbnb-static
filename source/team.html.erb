@@ -3,10 +3,10 @@
   <div class="team">
     <ul class="list-inline text-center">
       <h2>Our team</h2>
-      <% ["paul", "jb", "david"].each do |member| %>
+      <% data.team.each do |member, info| %>
         <li>
-          <h3><%= member.capitalize %></h3>
-          <%= image_tag "#{member}.jpg", class: "avatar-extra-large" %>
+          <h3><%= info.name.capitalize %></h3>
+          <%= image_tag info.picture, class: "avatar-extra-large" %>
         </li>
       <% end %>
     </ul>
